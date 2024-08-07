@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     height: 100vh; /* Each section takes up full viewport height */
     width: 100%; /* Make each section full width */
+    position: relative; /* Added relative position */
 }
 
 #page1 {
@@ -51,17 +52,20 @@ body {
     z-index: 1; /* Ensure the text is above the image */
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#image img {
-    width: 30vw; /* Use viewport width for responsiveness */
-    height: auto;
+#image {
     position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
+    top: 15px;
+    left: 15px;
+}
+
+#image img {
+    width: 5vw; /* Reduced size */
+    height: auto;
+    border-radius: 50%; /* Optional: make it circular */
 }
 
 #arrow {
@@ -136,4 +140,49 @@ body {
     font-style: normal;
     color: whitesmoke;
     text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #big_name {
+        font-size: 3em;
+    }
+
+    #image img {
+        width: 20vw; /* Adjust size for responsiveness */
+    }
+
+    .content-item {
+        width: 80%;
+    }
+
+    .content-item img {
+        margin-bottom: 10px;
+    }
+
+    .content-item h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #big_name {
+        font-size: 2em;
+    }
+
+    #image img {
+        width: 30vw; /* Adjust size for responsiveness */
+    }
+
+    .content-item {
+        width: 100%;
+    }
+
+    .content-item img {
+        margin-bottom: 5px;
+    }
+
+    .content-item h2 {
+        font-size: 1.2em;
+    }
 }
