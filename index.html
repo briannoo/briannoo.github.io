@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <title>personal website</title>
+    <title>Personal Website</title>
 </head>
 <body>
     <div class="section" id="page1">
@@ -39,15 +39,15 @@
     <div class="section" id="page2">
         <div class="content-row">
             <div class="content-item" id="california">
-                <img src="california.png" alt="california">
+                <img src="california.png" alt="California">
                 <h2 id="caltext">Born and raised in Los Angeles, California</h2>
             </div>
             <div class="content-item" id="berkeley">
-                <img src="cal.png" alt="berkeley">
+                <img src="cal.png" alt="Berkeley">
                 <h2 id="berkeleytext">UC Berkeley Class of 2024</h2>
             </div>
             <div class="content-item" id="ibm">
-                <img src="ibm.png" alt="ibm">
+                <img src="ibm.png" alt="IBM">
                 <h2 id="worktext">Currently doing data at IBM</h2>
             </div>
         </div>
@@ -58,6 +58,15 @@
         function scrollToNextPage() {
             document.getElementById('page2').scrollIntoView({ behavior: 'smooth' });
         }
+
+        window.addEventListener('scroll', function() {
+            var arrow = document.getElementById('arrow');
+            if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+                arrow.style.display = 'none';
+            } else {
+                arrow.style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>
