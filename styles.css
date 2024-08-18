@@ -99,11 +99,11 @@ body {
 }
 
 #resume {
-    right: 10pxc;
+    right: 10px;
 }
 
 #linkedin {
-    right: alc(10px + 5vw + 1em);
+    right: calc(10px + 5vw + 1em);
 }
 
 #resume:hover,
